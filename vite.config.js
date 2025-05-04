@@ -7,12 +7,14 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
+      includeAssets: ['favicon.svg', 'icon-192.png', 'icon-512.png'],
       manifest: {
         name: 'PopBox',
         short_name: 'PopBox',
+        description: 'Aplicația de familie pentru poze, mesaje și momente împărtășite',
         start_url: '/',
         display: 'standalone',
-        background_color: '#000000',
+        background_color: '#ffffff',
         theme_color: '#0ea5e9',
         icons: [
           {
@@ -24,7 +26,7 @@ export default defineConfig({
             src: '/icon-512.png',
             sizes: '512x512',
             type: 'image/png',
-          },
+          }
         ],
       },
     }),
